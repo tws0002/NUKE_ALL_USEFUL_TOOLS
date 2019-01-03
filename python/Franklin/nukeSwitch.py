@@ -1,4 +1,9 @@
-﻿import nuke, sys, subprocess
+﻿'''
+Copyright (c) 2018 Franklin VFX Co.
+Thanks to Thibaud Carpentier
+'''
+
+import nuke, sys, subprocess
 
 def versionSwitch():
     nuke.scriptSave() # Save current script
@@ -11,4 +16,3 @@ def versionSwitch():
         nukeProcess = subprocess.Popen([nukeExe, "--nukex", nukeScript]) # Launch Nuke X
         print 'Close nuke and launch nukeX'
     nuke.executeInMainThread(nuke.scriptExit) # Close current script
-# versionSwitch()

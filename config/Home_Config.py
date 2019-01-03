@@ -61,6 +61,16 @@ nuke.pluginAddPath(pipe_path + './gizmos/Other/pixelfudger');
 # except:   # < Nuke 6
 # 	pass
 
+#-----------------------------------------------------------------------------------------------------------------
+# DEV OPTIONS
+#-----------------------------------------------------------------------------------------------------------------
+dev = "True"
+if dev == "True":
+    devPrint = '- Dev Options ................... Yes'
+else:
+    devPrint = '- Dev Options ................... No'
+nuke.tprint(devPrint)
+
 
 #-----------------------------------------------------------------------------------------------------------------
 # IMPORT MACHINE MOLLE PIPE
@@ -79,7 +89,8 @@ import F_Toolsets
 # nuke.load("F_Toolsets")
 nuke.load("F_Panels")
 nuke.load("F_Scripts")
-nuke.load("F_Tools")
+# nuke.load("F_Tools")
+import F_Tools
 nuke.load("F_Presets")
 
 
@@ -87,6 +98,7 @@ nuke.load("F_Presets")
 # IMPORT CGEV TOOLS
 #-----------------------------------------------------------------------------------------------------------------
 import C_Tools                         # C gizmos
+
 
 
 
